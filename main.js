@@ -10,9 +10,6 @@ class ingrediente {
 
 }
 
-const arroz = new ingrediente('arroz', false, 0.8);
-console.log(arroz);
-
 class medida {
     constructor(nome, conversor) {
         this.nome = nome;
@@ -20,22 +17,40 @@ class medida {
     }
 }
 
-const xicara = new medida('xicara', 240);
+const ingredientes = new Array(); 
+const medidas = new Array();
+
+ingredientes.push(new ingrediente('arroz', false, 0.8))
+
+medidas.push(new medida('Xícara', 240))
+medidas.push(new medida('Colher de sopa', 15))
+medidas.push(new medida('Colher de Chá', 5))
+
+const selectEntrada = document.getElementById("seletorEntrada");
+const selectSaida = document.getElementById("seletorSaida");
+const selectIngrediente = document.getElementById("select-ingrediente");
+
+
+ingredientes.forEach(function(ingrediente){
+    let option = document.createElement("option"); 
+    option.text = ingrediente.nome;
+    selectIngrediente.add(option);
+});
+
+ medidas.forEach(function(medida){
+     let optionEntrada = document.createElement("option"); 
+     let optionSaida = document.createElement("option"); 
+     optionEntrada.text = medida.nome;
+     optionSaida.text = medida.nome;
+     selectEntrada.add(optionEntrada);
+     selectSaida.add(optionSaida);
+})
 
 
 
-// console.log(xicara);
 
-
-
-const select = document.getElementById("seletorEntrada");
-const option = document.createElement("option"); 
-option.text = 'text'
-option.value = 1; 
-select.add(option);
-
-
-
+const arroz = ingredientes[0];
+const xicara = medidas[0];
 
 const inputEntrada = document.querySelector('#entrada > input');
 const inputSaida = document.querySelector('#saida > input');
@@ -46,7 +61,7 @@ inputEntrada.addEventListener('input', function(){
     inputSaida.value = converte();
 })
 
-const medidaSelecionada, ingredienteSelecionado; //falta fórmula para alterar estas variáveis
+// const medidaSelecionada, ingredienteSelecionado; //falta fórmula para alterar estas variáveis
 
 
 // funcao que converte valores (ainda com valores estaticos para teste)

@@ -20,7 +20,8 @@ class medida {
 const ingredientes = new Array(); 
 const medidas = new Array();
 
-ingredientes.push(new ingrediente('arroz', false, 0.8))
+ingredientes.push(new ingrediente('arroz', false, 0.8));
+ingredientes.push(new ingrediente('farinha', false, 1));
 
 medidas.push(new medida('Xícara', 240))
 medidas.push(new medida('Colher de sopa', 15))
@@ -45,6 +46,42 @@ ingredientes.forEach(function(ingrediente){
      selectEntrada.add(optionEntrada);
      selectSaida.add(optionSaida);
 })
+
+let conversorEntrada, conversorSaida, densidadeIngrediente;
+
+selectIngrediente.onchange = capturaIngrediente;
+selectEntrada.onchange = capturaEntrada;
+selectSaida.onchange = capturaSaida;
+
+function capturaEntrada() {
+    let medidaEntrada = selectEntrada.value;
+    medidas.forEach(function(medida){
+    if (medidaEntrada === medida.nome){
+        conversorEntrada = medida.conversor;
+        }    
+    })
+}
+
+function capturaIngrediente() {
+    let ingredienteSelecionado = selectIngrediente.value; 
+    ingredientes.forEach(function(ingrediente){
+        if (ingredienteSelecionado === ingrediente.nome){
+            densidadeIngrediente = ingrediente.densidade;
+            }    
+        })
+}
+
+function capturaSaida() {
+    let medidaSaida = selectSaida.value;
+    medidas.forEach(function(medida){
+        if (medidaSaida === medida.nome){
+            conversorSaida = medida.conversor;
+            }    
+        })
+}
+
+
+
 
 
 

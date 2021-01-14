@@ -11,9 +11,15 @@ class ingrediente {
 }
 
 class medida {
-    constructor(nome, conversor) {
+    constructor(nome, ehVolume, conversor) {
+        if (typeof ehVolume !== "boolean") {
+            throw new Error('ehVolume must be true or false')
+        } 
         this.nome = nome;
-        this.conversor = conversor;
+        this.ehVolume = ehVolume;
+        if (ehVolume === true){ 
+         this.conversor = conversor;
+        }
     }
 }
 
@@ -23,9 +29,10 @@ const medidas = new Array();
 ingredientes.push(new ingrediente('arroz', false, 0.8));
 ingredientes.push(new ingrediente('farinha', false, 1));
 
-medidas.push(new medida('Xícara', 240))
-medidas.push(new medida('Colher de sopa', 15))
-medidas.push(new medida('Colher de Chá', 5))
+medidas.push(new medida('Xícara', true, 240))
+medidas.push(new medida('Colher de sopa', true, 15))
+medidas.push(new medida('Colher de Chá', true, 5))
+medidas.push(new medida('gramas', false))
 
 const selectEntrada = document.getElementById("seletorEntrada");
 const selectSaida = document.getElementById("seletorSaida");
@@ -47,7 +54,7 @@ ingredientes.forEach(function(ingrediente){
      selectSaida.add(optionSaida);
 })
 
-let conversorEntrada, conversorSaida, densidadeIngrediente;
+let densidadeIngrediente, conversorEntrada, entradaEhVolume, conversorSaida, saidaEhVolume;
 
 selectIngrediente.onchange = capturaIngrediente;
 selectEntrada.onchange = capturaEntrada;
@@ -58,6 +65,7 @@ function capturaEntrada() {
     medidas.forEach(function(medida){
     if (medidaEntrada === medida.nome){
         conversorEntrada = medida.conversor;
+        entradaEhVolume = medida.ehVolume;
         }    
     })
 }
@@ -76,18 +84,10 @@ function capturaSaida() {
     medidas.forEach(function(medida){
         if (medidaSaida === medida.nome){
             conversorSaida = medida.conversor;
+            saidaEhVolume = medida.ehVolume;
             }    
         })
 }
-
-
-
-
-
-
-
-const arroz = ingredientes[0];
-const xicara = medidas[0];
 
 const inputEntrada = document.querySelector('#entrada > input');
 const inputSaida = document.querySelector('#saida > input');
@@ -95,19 +95,22 @@ const inputSaida = document.querySelector('#saida > input');
 //evento que chama a funcao para converter valores
 inputEntrada.addEventListener('input', function(){
     const entrada = parseFloat(inputEntrada.value);
-    inputSaida.value = converte();
+    inputSaida.value = converte(entrada, conversorEntrada, conversorSaida, densidadeIngrediente);
 })
 
-// const medidaSelecionada, ingredienteSelecionado; //falta fórmula para alterar estas variáveis
-
-
-// funcao que converte valores (ainda com valores estaticos para teste)
-function converte() {
-    var valorDeSaida
-    
-    if (arroz.liquido === false) {
-        valorDeSaida = inputEntrada.value * xicara.conversor * arroz.densidade // inputEntrada.value * medidaSelecionada * ingredienteSelecionado
-    } else {valorDeSaida = inputEntrada.value * xicara.conversor}
-
-    return valorDeSaida
+function converte(entrada, coEntrada, coSaida, densidade) {
+    if (entradaEhVolume === false & saidaEhVolume === true){
+        const volume = entrada / densidade;
+        const resultado = volume / coSaida;
+        return resultado;        
+    } else if (entradaEhVolume === true & saidaEhVolume === false){
+        const volume = entrada * coEntrada;
+        const resultado = volume * densidade;
+        return resultado;
+    } else if (entradaEhVolume === true & saidaEhVolume === true) {
+        const volume = entrada * coEntrada;
+        const resultado = volume / coSaida;
+        return resultado;
+    }
 }
+

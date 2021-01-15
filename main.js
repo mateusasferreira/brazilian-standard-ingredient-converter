@@ -98,6 +98,16 @@ inputEntrada.addEventListener('input', function(){
     inputSaida.value = converte(entrada, conversorEntrada, conversorSaida, densidadeIngrediente);
 })
 
+document.addEventListener('change', function(e){
+        if(e.target.tagName=="SELECT"){
+            const entrada = parseFloat(inputEntrada.value);
+            inputSaida.value = converte(entrada, conversorEntrada, conversorSaida, densidadeIngrediente);
+        }
+    }
+)
+
+
+
 function converte(entrada, coEntrada, coSaida, densidade) {
     if (entradaEhVolume === false & saidaEhVolume === true){
         const volume = entrada / densidade;

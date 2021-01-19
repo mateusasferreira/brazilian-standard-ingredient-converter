@@ -3,29 +3,33 @@
     <head>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
         <title>Conversor de receitas</title>
     </head>
     <body>
 
-        <div>
-             <select id="select-ingrediente">
-                 <option>Selecione um ingrediente</option>                           
-             </select>
-        </div>
-
-        <div id="entrada">
-            <input type="number" placeholder="xícaras"> 
+        <div class="caixa-conversor">
+            <div>
+                <select class="select-ingrediente" id="select-ingrediente">
+                    <option>Selecione um ingrediente</option>                           
+                </select>
+            </div>
             
-            <select id="seletorEntrada">
-                <option>Selecione uma medida</option>
-            </select>
-        </div>
-
-        <div id="saida">
-            <input type="number" placeholder="gramas">
-            <select id="seletorSaida">
-                <option>Selecione uma medida</option>                
-            </select>
+            <div id="entrada">
+                <input class="input-padrao" type="number" placeholder="xícaras"> 
+                
+                <select class="select-medida" id="seletorEntrada">
+                    <option>Selecione uma medida</option>
+                </select>
+            </div>
+            
+            <div id="saida">
+                <input class="input-padrao" type="number" placeholder="gramas">
+                <select class="select-medida" id="seletorSaida">
+                    <option>Selecione uma medida</option>                
+                </select>
+            </div>
         </div>
 
 

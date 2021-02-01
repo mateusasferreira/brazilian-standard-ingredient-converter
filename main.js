@@ -112,15 +112,15 @@ function converte(entrada, coEntrada, coSaida, densidade) {
     if (entradaEhVolume === false & saidaEhVolume === true){
         const volume = entrada / densidade;
         const resultado = volume / coSaida;
-        return resultado;        
+        return resultado.toFixed(1);        
     } else if (entradaEhVolume === true & saidaEhVolume === false){
         const volume = entrada * coEntrada;
         const resultado = volume * densidade;
-        return resultado;
+        return resultado.toFixed(1);
     } else if (entradaEhVolume === true & saidaEhVolume === true) {
         const volume = entrada * coEntrada;
         const resultado = volume / coSaida;
-        return resultado;
+        return resultado.toFixed(1);
     }
 }
 

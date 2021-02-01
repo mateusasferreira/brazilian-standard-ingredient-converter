@@ -1,0 +1,100 @@
+
+html {
+    --fonte-padrao: 'Open Sans';
+    --fonte-corpo-post: 'Noto Serif';
+    --cinza-escuro: #1C1C1C;
+    --cinza-claro: #4F4F4F;
+    --background-principal: #F8F8FF;
+    --background-secundario: #D6D6FF;
+    --background-destaque: #D8BFD8;
+    --azul-claro: #B0C4DE;
+}
+
+html p {
+    font-family: var(--fonte-padrao);
+}
+
+.page {
+    display: grid;
+    grid-template-areas: 
+    "cabecalho"
+    "corpo"
+    "rodape";
+    /* grid-template-columns: 10% 70% 20%; */
+    grid-template-rows: 20% auto 10% ;
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: var(--background-destaque);
+    grid-column: 1 /4;
+}
+
+.cabecalho h1 {
+    font-family: var(--fonte-padrao);
+    color: var(--cinza-claro);
+    font-size: 50px;
+    font-weight: 400;
+    margin: 20px;       
+}
+
+.cabecalho h1 strong {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.menu-lateral {
+    background-color: var(--background-secundario);
+    grid-column: 1 / 2;
+    box-shadow: 0px 2px 5px -2px #888;
+    z-index: 1;
+}
+
+.banner-lateral {
+    background-color: var(--background-secundario);
+    grid-column: 3 / 3;
+}
+
+.corpo {
+    grid-area: corpo;
+    display: grid;
+    grid-template-columns: 10% 70% 20%; 
+    /* grid-column: 2 / 3; */    
+}
+
+.conteudo-principal {
+    grid-column: 2 / 3;
+    background-color: var(--background-principal);
+    padding: 2em;
+}
+
+.conteudo-principal h1 {    
+    font-family: var(--fonte-corpo-post);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+    color: var(--cinza-escuro);
+} 
+
+.conteudo-principal h2 {
+    font-family: var(--fonte-corpo-post);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    color: var(--cinza-escuro);
+}
+
+.conteudo-principal p {
+    font-family: var(--fonte-corpo-post);
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    color: var(--cinza-escuro);
+    margin-bottom: 20px;
+}
+
+.rodape {
+    grid-area: rodape;
+    background-color: var(--background-destaque);
+}

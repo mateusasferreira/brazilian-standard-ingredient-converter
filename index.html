@@ -3,36 +3,62 @@
     <head>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/conversor.css">
+        <link rel="stylesheet" href="css/base.css">
         <title>Conversor de receitas</title>
     </head>
-    <body>
+    <body class="page">
+        <header class="cabecalho">
+            <h1><strong>Lorem</strong>Ipsum</h1>
 
-        <div class="caixa-conversor">
-            <div>
-                <select class="select-ingrediente" id="select-ingrediente">
-                    <option>Selecione um ingrediente</option>                           
-                </select>
+        </header>
+        <main class="corpo">
+            <div class="menu-lateral">
+
             </div>
-            
-            <div id="entrada">
-                <input class="input-padrao" type="number" placeholder="xícaras"> 
+            <div class="conteudo-principal">             
+                <div class="caixa-conversor">
+                    <div>
+                        <select class="select-ingrediente" id="select-ingrediente">
+                            <option>Selecione um ingrediente</option>                           
+                        </select>
+                    </div>
+                    
+                    <div id="entrada">
+                        <input class="input-padrao" type="number" placeholder="xícaras"> 
+                        
+                        <select class="select-medida" id="seletorEntrada">
+                            <option>Selecione uma medida</option>
+                        </select>
+                    </div>
+                    
+                    <div id="saida">
+                        <input class="input-padrao" type="number" placeholder="gramas">
+                        <select class="select-medida" id="seletorSaida">
+                            <option>Selecione uma medida</option>                
+                        </select>
+                    </div>
+                </div>
+                <div class="conteudo-texto">
+                    <h1>Aprenda como converter ingredientes</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum massa nisl, quis interdum sem tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tristique arcu quis luctus feugiat. Aenean ultrices ex non sem condimentum mollis. Nunc ac nisi tincidunt, porttitor sapien nec, vestibulum felis. Nam elementum tortor dictum molestie consequat. Morbi et lorem finibus, ultrices tellus vel, interdum augue. Duis ac lectus tellus. Fusce non tellus sagittis nisl luctus venenatis.</p>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum massa nisl, quis interdum sem tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tristique arcu quis luctus feugiat. Aenean ultrices ex non sem condimentum mollis. Nunc ac nisi tincidunt, porttitor sapien nec, vestibulum felis. Nam elementum tortor dictum molestie consequat. Morbi et lorem finibus, ultrices tellus vel, interdum augue. Duis ac lectus tellus. Fusce non tellus sagittis nisl luctus venenatis</p>
+                    <h2></h2>
+                </div>
+            </div>    
+            <div class="banner-lateral">
                 
-                <select class="select-medida" id="seletorEntrada">
-                    <option>Selecione uma medida</option>
-                </select>
             </div>
-            
-            <div id="saida">
-                <input class="input-padrao" type="number" placeholder="gramas">
-                <select class="select-medida" id="seletorSaida">
-                    <option>Selecione uma medida</option>                
-                </select>
-            </div>
-        </div>
+        </main>
+        <footer class="rodape">
 
-
+        </footer>
     </body>
     <script src="main.js"></script>
 

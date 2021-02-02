@@ -8,50 +8,60 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/conversor.css">
         <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/conversor.css">    
+        <link rel="stylesheet" href="css/conteudo.css">
+        <link rel="stylesheet" href="css/cabecalho.css">
         <title>Conversor de receitas</title>
     </head>
     <body class="page">
         <header class="cabecalho">
-            <h1><strong>Lorem</strong>Ipsum</h1>
+            <h1 class="cabecalho__titulo"><strong>Converte</strong>Receitas</h1>
 
         </header>
         <main class="corpo">
             <div class="menu-lateral">
 
             </div>
-            <div class="conteudo-principal">             
-                <div class="caixa-conversor">
-                    <div>
-                        <select class="select-ingrediente" id="select-ingrediente">
-                            <option>Selecione um ingrediente</option>                           
-                        </select>
-                    </div>
-                    
-                    <div id="entrada">
-                        <input class="input-padrao" type="number" placeholder="xícaras"> 
+            <section class="container">             
+                    <div class="box">
+                        <div>
+                            <select class="box__selectPadrao" id="select-ingrediente">
+                                <option>Selecione um ingrediente</option>                           
+                            </select>
+                        </div>
                         
-                        <select class="select-medida" id="seletorEntrada">
-                            <option>Selecione uma medida</option>
-                        </select>
+                        <div id="entrada">
+                            <input class="box__input" type="number" placeholder="xícaras"> 
+                            
+                            <select class="box__selectImbutido" id="seletorEntrada">
+                                <option>Selecione uma medida</option>
+                            </select>
+                        </div>
+                        
+                        <div id="saida">
+                            <input class="box__input" type="number" placeholder="gramas">
+                            <select class="box__selectImbutido" id="seletorSaida">
+                                <option>Selecione uma medida</option>                
+                            </select>
+                        </div>
                     </div>
-                    
-                    <div id="saida">
-                        <input class="input-padrao" type="number" placeholder="gramas">
-                        <select class="select-medida" id="seletorSaida">
-                            <option>Selecione uma medida</option>                
-                        </select>
-                    </div>
+                    <div class="box">
+                        <div class="box__campo">
+                            <input type="text" class="box__input">
+                            <button class="box__selectImbutido">Enviar</button>
+                        </div>
+                    </div>  
                 </div>
-                <div class="conteudo-texto">
-                    <h1>Aprenda como converter ingredientes</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum massa nisl, quis interdum sem tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tristique arcu quis luctus feugiat. Aenean ultrices ex non sem condimentum mollis. Nunc ac nisi tincidunt, porttitor sapien nec, vestibulum felis. Nam elementum tortor dictum molestie consequat. Morbi et lorem finibus, ultrices tellus vel, interdum augue. Duis ac lectus tellus. Fusce non tellus sagittis nisl luctus venenatis.</p>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum massa nisl, quis interdum sem tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tristique arcu quis luctus feugiat. Aenean ultrices ex non sem condimentum mollis. Nunc ac nisi tincidunt, porttitor sapien nec, vestibulum felis. Nam elementum tortor dictum molestie consequat. Morbi et lorem finibus, ultrices tellus vel, interdum augue. Duis ac lectus tellus. Fusce non tellus sagittis nisl luctus venenatis</p>
-                    <h2></h2>
+                
+                <div class="conteudo">
+                    <h1 class="conteudo__titulo1">Aprenda como converter ingredientes</h1>
+                    <p class="conteudo__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum massa nisl, quis interdum sem tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tristique arcu quis luctus feugiat. Aenean ultrices ex non sem condimentum mollis. Nunc ac nisi tincidunt, porttitor sapien nec, vestibulum felis. Nam elementum tortor dictum molestie consequat. Morbi et lorem finibus, ultrices tellus vel, interdum augue. Duis ac lectus tellus. Fusce non tellus sagittis nisl luctus venenatis.</p>
+                    <h2 class="conteudo__titulo2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+                    <p class="conteudo__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum massa nisl, quis interdum sem tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tristique arcu quis luctus feugiat. Aenean ultrices ex non sem condimentum mollis. Nunc ac nisi tincidunt, porttitor sapien nec, vestibulum felis. Nam elementum tortor dictum molestie consequat. Morbi et lorem finibus, ultrices tellus vel, interdum augue. Duis ac lectus tellus. Fusce non tellus sagittis nisl luctus venenatis</p>
+                    <h2 class="conteudo__titulo2"></h2>
                 </div>
-            </div>    
+            </section>    
             <div class="banner-lateral">
                 
             </div>

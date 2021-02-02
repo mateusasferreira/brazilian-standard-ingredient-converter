@@ -1,0 +1,25 @@
+.conteudo__titulo1 {    
+    color: var(--cinza-escuro);
+    font-family: var(--fonte-corpo-post);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+} 
+
+.conteudo__titulo2 {
+    color: var(--cinza-escuro);
+    font-family: var(--fonte-corpo-post);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+
+.conteudo__paragrafo {
+    color: var(--cinza-escuro);
+    font-family: var(--fonte-corpo-post);
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}

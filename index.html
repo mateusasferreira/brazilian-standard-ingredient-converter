@@ -17,13 +17,14 @@
     <body class="page">
         <header class="cabecalho">
             <h1 class="cabecalho__titulo"><strong>Converte</strong>Receitas</h1>
-
+            <h2 class="cabecalho__subtitulo">Descubra quantas gramas tem uma xícara ou colher de seu ingrediente e muito mais.</h2>
         </header>
         <main class="corpo">
             <div class="menu-lateral">
 
             </div>
             <section class="container">             
+                <div class="container__flex">
                     <div class="box">
                         <div>
                             <select class="box__selectPadrao" id="select-ingrediente">
@@ -31,28 +32,31 @@
                             </select>
                         </div>
                         
-                        <div id="entrada">
-                            <input class="box__input" type="number" placeholder="xícaras"> 
+                        <div class="box__campo" id="entrada">
+                            <input class="box__input" type="number" placeholder="Quantidade"> 
                             
                             <select class="box__selectImbutido" id="seletorEntrada">
-                                <option>Selecione uma medida</option>
+                                <option>Medida</option>
                             </select>
                         </div>
                         
-                        <div id="saida">
-                            <input class="box__input" type="number" placeholder="gramas">
+                        <div class="box__campo" id="saida">
+                            <input class="box__input" type="number" placeholder="Quantidade">
                             <select class="box__selectImbutido" id="seletorSaida">
-                                <option>Selecione uma medida</option>                
+                                <option>Medida</option>                
                             </select>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box box--flex">
+                        <h3 class="box__titulo">Não achou o seu ingrediente?</h3>
+                        <p class="box__texto">Nos conte qual é:</p>
                         <div class="box__campo">
                             <input type="text" class="box__input">
                             <button class="box__selectImbutido">Enviar</button>
                         </div>
                     </div>  
                 </div>
+            </div>    
                 
                 <div class="conteudo">
                     <h1 class="conteudo__titulo1">Aprenda como converter ingredientes</h1>

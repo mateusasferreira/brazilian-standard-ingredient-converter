@@ -1,23 +1,26 @@
+.container__flex {
+    display: flex;
+    justify-content: space-around;
+}
+
 
 .box {
     background-color: var(--azul-claro);
     box-shadow: 2px 2px 5px lightgrey;    
     border-radius: 15px;
     margin-bottom: 2em;
+    margin-right: 1em;
     padding: 2em;
-    width: calc(100% - 4em);
-}
-
-.box select, input {
-    font-family: var(--fonte-padrao);
-    font-size: 18px;
+    width: fit-content;
+    flex-grow: 2;
 }
 
 .box__selectPadrao {
     border: none;
-    color: grey;
     border-radius: 5px;
+    color: grey;
     font-family: var(--fonte-padrao);
+    font-size: 1rem;
     height: 40px;
     width: fit-content;
 }
@@ -30,26 +33,56 @@
     border-radius: 0 5px 5px 0; 
     /* box-shadow: 1px 2px 5px grey; */
     color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1rem;
     padding: 0 10px;
+    width:fit-content;
 }
-
-
 
 .box__input {
     border: none;
     border-radius: 5px 0 0 5px; 
     color: var(--cinza-claro);
     /* margin: 10px 0; */
+    font-family: var(--fonte-padrao);
+    font-size: 1rem;
     height: 40px;
-    width: 250px;
+    width: 60%;
     /* box-shadow: 1px 2px 5px grey; */
 }
 
-#entrada, #saida {
-    display: flex;   
-    margin: 20px 0; 
+.box__campo {
+    display: flex;  
+    margin: 1em 0;  
 }
 
-.box__campo {
-    display: flex;    
+.box--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      
 }
+
+.box__titulo {
+    color: var(--cinza-claro);
+    font-family: var(--fonte-padrao);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1em;        
+}
+
+.box__texto {
+    color: var(--cinza-claro);
+    font-family: var(--fonte-padrao);
+    font-size: 1rem;    
+}
+
+@media screen and (max-width: 1024px) {
+    .container__flex {
+        flex-direction: column;
+    }
+
+    .box {
+        width: calc(100% - 4em);
+    }
+}
+

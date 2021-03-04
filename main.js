@@ -1,27 +1,8 @@
-class ingrediente {
-    constructor(nome, liquido, densidade){
-        if (typeof liquido !== "boolean") {
-            throw new Error('liquido must be true or false')
-        } 
-        this.nome = nome;
-        this.liquido = liquido;
-        this.densidade = densidade; //em g/ml
-    }
+import {ingrediente} from './ingrediente.js'
+import {medida} from './medida.js'
 
-}
 
-class medida {
-    constructor(nome, ehVolume, conversor) {
-        if (typeof ehVolume !== "boolean") {
-            throw new Error('ehVolume must be true or false')
-        } 
-        this.nome = nome;
-        this.ehVolume = ehVolume;
-        if (ehVolume === true){ 
-         this.conversor = conversor;
-        }
-    }
-}
+
 
 const ingredientes = new Array(); 
 const medidas = new Array();
@@ -124,3 +105,5 @@ function converte(entrada, coEntrada, coSaida, densidade) {
     }
 }
 
+import {camelCase} from 'lodash'
+console.log(camelCase('hello world'))

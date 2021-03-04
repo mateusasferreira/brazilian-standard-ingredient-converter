@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/conversor.css">    
+        <link rel="stylesheet" href="../css/conteudo.css">
+        <link rel="stylesheet" href="../css/cabecalho.css">
+        <title>Conversor de receitas</title>
+        
+    </head>
+    <body class="page">
+        <header class="cabecalho">
+            <h1 class="cabecalho__titulo"><strong>Converte</strong>Receitas</h1>
+            <h2 class="cabecalho__subtitulo">Descubra quantas gramas tem uma xícara ou colher de seu ingrediente e muito mais.</h2>
+        </header>
+        <main class="corpo">
+            <div class="menu-lateral">
+
+            </div>
+            <section class="container">             
+                <div class="container__flex">
+                    <div class="box">
+                        <div>
+                            <select class="box__selectPadrao" id="select-ingrediente">
+                                <option>Selecione um ingrediente</option>                           
+                            </select>
+                        </div>
+                        
+                        <div class="box__campo" id="entrada">
+                            <input class="box__input" type="number" placeholder="Quantidade"> 
+                            
+                            <select class="box__selectImbutido" id="seletorEntrada">
+                                <option>Medida</option>
+                            </select>
+                        </div>
+                        
+                        <div class="box__campo" id="saida">
+                            <input class="box__input" type="number" placeholder="Quantidade">
+                            <select class="box__selectImbutido" id="seletorSaida">
+                                <option>Medida</option>                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box box--flex">
+                        <h3 class="box__titulo">Não achou o seu ingrediente?</h3>
+                        <p class="box__texto">Nos conte qual é:</p>
+                        <div class="box__campo">
+                            <input type="text" class="box__input">
+                            <button class="box__selectImbutido">Enviar</button>
+                        </div>
+                    </div>  
+                </div>
+            </div>    
+                
+                <div class="conteudo">
+                    <h1 class="conteudo__titulo1">Aprenda como converter ingredientes</h1>
+                    <p class="conteudo__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum massa nisl, quis interdum sem tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tristique arcu quis luctus feugiat. Aenean ultrices ex non sem condimentum mollis. Nunc ac nisi tincidunt, porttitor sapien nec, vestibulum felis. Nam elementum tortor dictum molestie consequat. Morbi et lorem finibus, ultrices tellus vel, interdum augue. Duis ac lectus tellus. Fusce non tellus sagittis nisl luctus venenatis.</p>
+                    <h2 class="conteudo__titulo2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+                    <p class="conteudo__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum massa nisl, quis interdum sem tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tristique arcu quis luctus feugiat. Aenean ultrices ex non sem condimentum mollis. Nunc ac nisi tincidunt, porttitor sapien nec, vestibulum felis. Nam elementum tortor dictum molestie consequat. Morbi et lorem finibus, ultrices tellus vel, interdum augue. Duis ac lectus tellus. Fusce non tellus sagittis nisl luctus venenatis</p>
+                    <h2 class="conteudo__titulo2"></h2>
+                </div>
+            </section>    
+            <div class="banner-lateral">
+                
+            </div>
+        </main>
+        <footer class="rodape">
+
+        </footer>
+    </body>
+    <script src="../dist/index.js"></script>
+
+</html>

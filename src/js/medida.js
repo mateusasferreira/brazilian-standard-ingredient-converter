@@ -6,7 +6,7 @@ export class medida {
         this.nome = nome;
         this.ehVolume = ehVolume;
         if (ehVolume === true){ 
-         this.conversor = conversor;
+         this.conversor = conversor; //volume total do recipiente em ml
         }
     }
 }

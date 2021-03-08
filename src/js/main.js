@@ -6,15 +6,16 @@ const medidas = new Array();
 
 ingredientes.push(new ingrediente('arroz', false, 0.8));
 ingredientes.push(new ingrediente('farinha', false, 1));
+ingredientes.push(new ingrediente('açucar', false, 0.8))
 
 medidas.push(new medida('Xícara', true, 240))
 medidas.push(new medida('Colher de sopa', true, 15))
 medidas.push(new medida('Colher de Chá', true, 5))
 medidas.push(new medida('gramas', false))
 
-const selectEntrada = document.getElementById("seletorEntrada");
-const selectSaida = document.getElementById("seletorSaida");
-const selectIngrediente = document.getElementById("select-ingrediente");
+const selectEntrada = document.querySelector('[data-seletor-entrada]');
+const selectSaida = document.querySelector('[data-seletor-saida]');
+const selectIngrediente = document.querySelector('[data-seletor-ingrediente]');
 
 
 ingredientes.forEach(function(ingrediente){
@@ -102,5 +103,3 @@ function converte(entrada, coEntrada, coSaida, densidade) {
     }
 }
 
-import {camelCase} from 'lodash'
-console.log(camelCase('hello world'))

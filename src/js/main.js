@@ -1,9 +1,6 @@
 import {ingrediente} from './ingrediente.js'
 import {medida} from './medida.js'
 
-
-
-
 const ingredientes = new Array(); 
 const medidas = new Array();
 
